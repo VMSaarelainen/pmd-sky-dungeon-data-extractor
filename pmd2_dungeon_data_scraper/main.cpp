@@ -4,8 +4,9 @@
 #include <cstdint>
 #include <map>
 #include <iomanip>
+
+#include <floor_props.hpp>
 #include <nlohmann/json.hpp>
-#include "dungeonDataBinaryExtractor.hpp"
 
 using namespace std;
 
