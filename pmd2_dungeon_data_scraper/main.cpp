@@ -422,6 +422,17 @@ int main () {
 
 	int i = 0;
 	for (auto& entry : arm9data) {
+		if (entry.name == "Deep Concealed Ruins") { continue; } 	//these dungeons have no floor data, are not actually used or have other issues
+		else if (entry.name == "Shaymin Village") { continue; }
+		else if (entry.name == "Armaldo's Shelter") { continue; }
+		else if (entry.name == "Luminous Spring") { continue; }
+		else if (entry.name == "Hot Spring") { continue; }
+		else if (entry.name == "Black Swamp") { continue; }
+		else if (entry.name == "Little Plains") { continue; }
+		else if (entry.name == "Mt. Clear") { continue; }
+		else if (entry.name == "Challenge River") { continue; }
+		else if (entry.name == "Trial Forest") { continue; }
+		else if (entry.name == "[M:D1]Dummy") { continue; }
 		j[i]["name"]["en"] = entry.name;
 		j[i]["floorCount"] = entry.floorCount;
 		j[i]["dungeonGroupID"] = entry.mappa_s_data_index;
@@ -462,7 +473,7 @@ int main () {
 		    j[i]["floors"][to_string(f)]["hidden_stairs_spawn_chance"] = entry.floors[f].hidden_stairs_spawn_chance;
 		    j[i]["floors"][to_string(f)]["enemy_iq"] = entry.floors[f].enemy_iq;
 		    j[i]["floors"][to_string(f)]["iq_booster_value"] = entry.floors[f].iq_booster_value;
-			
+			j[i]["floors"][to_string(f)]["has_guaranteed_item"] = false;	//TODO: get a list of all floors with a guaranteed item spawn
 		}
 		i++;
 	}
