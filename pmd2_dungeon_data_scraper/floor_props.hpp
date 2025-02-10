@@ -83,6 +83,7 @@ struct floor_properties {
 	int16_t enemy_iq;                   // 0x1C: IQ stat of enemies
 	int16_t iq_booster_value; // 0x1E: IQ increase from the IQ booster item upon entering the floor
 	bool has_extra_item;
+	bool nonstory_flag;
 };
 
 extern std::map<uint8_t, std::string> dungeonNames;
