@@ -439,6 +439,7 @@ int main () {
 		j[i]["dungeonID"] = i;
 		j[i]["floorStartOffset"] = entry.floorStartOffset;
 		j[i]["totalDungeonGroupFloorCount"] = entry.totalDungeonGroupFloorCount;
+		j[i]["nonstory_flag"] = false;	//TODO: get a list dungeons with this flag set
 
 		for (int f = 1; f <= entry.floorCount; f++) {
 		    j[i]["floors"][to_string(f)]["layout"] = entry.floors[f].layout;
@@ -475,7 +476,6 @@ int main () {
 		    j[i]["floors"][to_string(f)]["enemy_iq"] = entry.floors[f].enemy_iq;
 		    j[i]["floors"][to_string(f)]["iq_booster_value"] = entry.floors[f].iq_booster_value;
 			j[i]["floors"][to_string(f)]["has_guaranteed_item"] = false;	//TODO: get a list of all floors with a guaranteed item spawn
-			j[i]["floors"][to_string(f)]["nonstory_flag"] = false;	//TODO: get a list dungeons with this flag set
 
 		}
 		i++;
